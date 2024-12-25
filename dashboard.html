@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/stylesDashboard.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="header row marginRight">
+        <ul>
+            <li>
+                <div class="incolearnLogo">
+                    <img src="assets/images/logo-xy1.png">
+                </div>
+            </li>
+            <li>
+                <select name="allCourses" class="allCourses">
+                    <option selected>All Courses</option>
+                    <option value="digitalMarketing">Digital Marketing</option>
+                    <option value="java">Java full stack</option>
+                    <option value="dataAnalysis">Data Analysis</option>
+                </select>
+            </li>
+            <li class="col-md-4">
+                <div id="custom-search-input">
+                    <div class="input-group">
+                        <input type="text" class="search-query form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" type="button">
+                                <span class=" bi bi-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li id="notification">
+                <span class="bi bi-bell-fill"></span>
+            </li>
+            <li id="login">
+                <span class="bi bi-person-circle"></span>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="gridbox marginRight">
+        <div class="sideMenu ">
+            <ul>
+                <li><span class="bi bi-person-circle"></span>&nbsp;<a href="#">Profile</a></li>
+                <li><span class="bi bi-layout-text-window-reverse"></span>&nbsp;<a href="#">Dashboard</a></li>
+                <li><span class="bi bi-file-text"></span>&nbsp;<a href="#">Courses</a></li>
+                <li><span class="bi bi-clock"></span>&nbsp;<a href="#">Upcoming Classes</a></li>
+                <li><span class="bi bi-heart"></span>&nbsp;<a href="#">Wishlist</a></li>
+                <li><span class="bi bi-card-text"></span>&nbsp;<a href="#">Certificates</a></li>
+                <li><span class="bi bi-gear"></span>&nbsp;<a href="#">Settings</a></li>
+                <li><span class="bi bi-box-arrow-right"></span>&nbsp;<a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div class="welcomeBack">
+            <div style="padding: 18px;">
+                <h4>Hi <span style="color: rgb(147, 147, 147);">DEBIDATTA !</span> </h4>
+                <p>Welcome back to incolearn jul17 2024</p>
+                <button>Cources</button>
+            </div>
+        </div>
+
+        <div class="learningOverview">
+            <h5>Learning Overview</h5>
+        </div>
+        <div class=" myCourse learningOverviewBox">
+            <p class="overviewHeadings"><span class="bi bi-files"></span>&nbsp;&nbsp;My Courses</p>
+            <p>Total</p>
+            <p class="overviewCourses">10 Courses</p>
+            <a>View Deatails &gt;</a>
+        </div>
+        <div class=" completedCourse learningOverviewBox">
+            <p class="overviewHeadings"><span class="bi bi-card-checklist"></span>&nbsp;&nbsp;Completed Courses</p>
+            <p>Total</p>
+            <p class="overviewCourses">8 Courses</p>
+            <a>View Details &gt;</a>
+        </div>
+        <div class=" certificates learningOverviewBox">
+            <p class="overviewHeadings"><span class="bi bi-card-text"></span>&nbsp;&nbsp;Certificates</p>
+            <p>Total</p>
+            <p class="overviewCourses">7 Certificates</p>
+            <a>view Details &gt;</a>
+        </div>
+
+        <div class="dailyProgress">
+            <h5>Daily Progress</h5>
+        </div>
+        <div class="dailyProgressbar row">
+            <div class="col-md-6">
+                <div class="dailyProgressbarContent">
+                    <canvas id="chart1"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="dailyProgressbarContent">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="popularCourses">
+            <h5>Popular Courses</h5>
+        </div>
+        <div class="digitalMarketing popularCoursesBox">
+            <img src="assets/images/19762.jpg">
+            <div class="heart">❤</div>
+            <p class="popularHead">Digital Marketing</p>
+            <p>19 jul 2024</p>
+        </div>
+        <div class="javaFullStack popularCoursesBox">
+            <img src="assets/images/40752.jpg">
+            <div class="heart">❤</div>
+            <p class="popularHead">Java Full Stack</p>
+            <p>19 jul 2024</p>
+        </div>
+        <div class="dataAnalysis popularCoursesBox">
+            <img src="assets/images/2.png">
+            <div class="heart">❤</div>
+            <p class="popularHead">Data Analyst</p>
+            <p>19 jul 2024</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        var ctx1 = document.getElementById('chart1').getContext('2d');
+        var chart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['A', 'B', 'C', 'D'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [70, 40, 90, 60],
+                    backgroundColor: 'rgba(76, 175, 80, 0.5)',
+                    borderColor: 'rgba(76, 175, 80, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

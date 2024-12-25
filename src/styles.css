@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header {
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+header a:hover {
+    color: rgb(147, 147, 147);
+    cursor: pointer;
+}
+
+header span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header button {
+    border-left: 0;
+    background: transparent;
+    color: white;
+}
+
+/* nav{
+    
+} */
+.incolearnLogo>img {
+    width: 200px;
+    height: 100%;
+}
+
+.navigationMenu li {
+    list-style-type: none;
+    float: left;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navigationMenu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.background_image {
+    /* grid-area: 1/1/1/5; */
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: sticky;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.704), rgba(0, 0, 0, 0.704)), url("/public/assets/images/independence-hall-philadelphia-pennsylvania-usa.jpg");
+
+}
+
+.headings {
+    color: #838383;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background_image>pre {
+    padding: 8% 0 1% 8%;
+    margin-left: -190px;
+    color: white;
+}
+
+.gridbox {
+    display: grid;
+    grid-template-rows: 400px 400px 200px 1fr 200px 1fr 200px 200px 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+
+}
+
+.background_image_boxes {
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+    margin-top: 50px;
+}
+
+.image_box_green {
+    background-color: #26800084;
+}
+
+.image_box_grey {
+    background-color: rgba(131, 131, 131, 0.519);
+}
+
+.background_image_box1 {
+    grid-area: 1/1/2/2;
+}
+
+.background_image_box2 {
+    grid-area: 1/2/2/3;
+}
+
+.background_image_box3 {
+    grid-area: 1/3/2/4;
+}
+
+.background_image_box4 {
+    grid-area: 1/4/2/5;
+}
+
+.about_us {
+    grid-area: 2/1/3/5;
+    height: 400px;
+}
+
+.about_us_paragraph {
+    width: 50%;
+}
+
+.side_border_left {
+    padding: 0 0 40px 10px;
+    border-left: 3px solid #838383;
+}
+
+.side_border_paragraph {
+    margin-top: -50px;
+    padding: 15px 10px 0 10px;
+}
+
+.about_us a {
+    padding: 10px;
+}
+
+.page_button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: #1d5406e8;
+
+}
+
+.page_button:hover {
+    background-color: #1d5406e8;
+    color: white;
+}
+
+.our_courses {
+    grid-area: 3/1/4/5;
+    width: 50%;
+    /* padding: 20px 0 20px 0; */
+}
+
+.our_courses_box1 {
+    grid-area: 4/1/5/2;
+}
+
+.our_courses_box2 {
+    grid-area: 4/2/5/3;
+}
+
+.our_courses_box3 {
+    grid-area: 4/3/5/4;
+}
+
+.our_courses_box4 {
+    grid-row: 4/4/5/5;
+}
+
+.image_box_gray {
+    background-color: #322e2e94;
+}
+
+.our_courses_boxes {
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    place-self: center;
+}
+
+.view_course_button_section {
+    grid-area: 5/1/6/5;
+}
+
+.carrier_path_image_section {
+    grid-area: 6/1/7/5;
+    background-color: rgba(131, 131, 131, 0.519);
+}
+
+.carrier_path_roadmap {
+    float: right;
+    width: 50%;
+    /* background-color: pink; */
+    padding: 6% 6% 6% 0;
+}
+
+.roadmap_image {
+    background-color: white;
+    background-image: url(../public/assets/images/roadmapfinal-removebg-preview.png);
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.our_achievements {
+    grid-area: 7/1/8/5;
+    width: 50%;
+    padding: 5% 5% 5% 0;
+}
+
+.display_item_flex {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.our_achievement_students {
+    grid-area: 8/1/9/2;
+}
+
+.our_achievement_graduates {
+    grid-area: 8/2/9/3;
+}
+
+.our_achievement_placed {
+    grid-area: 8/3/9/4;
+}
+
+.our_achievement_faculties {
+    grid-area: 8/4/9/5;
+}
+
+.achievement_boxes div {
+    padding: 10px;
+}
+
+.our_achievement_icons {
+    font-size: 50px;
+    color: #838383;
+}
+
+.side_border_right {
+    border-right: 3px solid #838383;
+}
+
+.our_achievement_text_div {
+    text-align: center;
+    padding: 20px;
+    color: #1d5406e8;
+    font-weight: 1000;
+}
+
+.our_achievement_numbers {
+    font-size: 50px;
+    margin-bottom: 0;
+    line-height: 45px;
+}
+
+.our_achievement_text_div>p {
+    margin-bottom: 0;
+}
+
+.debidatta_dash {
+    grid-area: 9/1/10/5;
+    background-color: rgba(131, 131, 131, 0.519);
+}
+
+.debidatta_section {
+    width: 50%;
+    height: 100%;
+    float: right;
+    padding: 10% 3% 0 8%;
+    background-color: white;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+.debidatta_dash h3 {
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.upcoming_events_section {
+    /* grid-area: 10/1/11/5; */
+    background-color: rgba(131, 131, 131, 0.519);
+}
+
+.gridbox2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 400px;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 5% 0 5% 0;
+
+}
+
+.upcoming_events {
+    grid-area: 1/1/2/5;
+
+}
+
+.upcoming_events_box1 {
+    grid-area: 2/1/3/2;
+}
+
+.upcoming_events_box2 {
+    grid-area: 2/2/3/3;
+}
+
+.upcoming_events_box3 {
+    grid-area: 2/3/3/4;
+}
+
+.upcoming_events_box4 {
+    grid-area: 2/4/3/5;
+}
+
+#footer_section {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: sticky;
+    background-image: linear-gradient(0deg, rgba(29, 84, 6, 0.91), rgba(29, 84, 6, 0.91)), url("/public/assets/images/independence-hall-philadelphia-pennsylvania-usa.jpg");
+}
+
+.gridbox3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    color: white;
+    text-align: left;
+    padding: 5% 0 5% 0;
+}
+
+.footer_about_us {
+    grid-area: 1/1/2/2;
+}
+
+.footer_quick_links {
+    grid-area: 1/2/2/3;
+}
+
+.footer_courses {
+    grid-area: 1/3/2/4;
+}
+
+.footer_news_latter {
+    grid-area: 1/4/2/5;
+}
+
+.gridbox3 ul {
+    padding-left: 0;
+}
+
+.gridbox3 ul li {
+    list-style-type: none;
+    padding: 10px;
+
+}
+
+.gridbox3 p {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.gridbox3 ul li span {
+    font-size: 20px;
+}
+
+.email_id {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #807c7c;
+    background-color: white;
+    border-radius: 3px;
+}
+.email_submit_btn{
+    padding: 5px;
+    border: 1px solid #807c7c;
+    background-color: white;
+    border-radius: 3px;
+    color: #807c7c;
+    
+}
+
+/* */
